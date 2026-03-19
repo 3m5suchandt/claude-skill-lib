@@ -1,5 +1,5 @@
 # claude-skill-lib
-Just a collection of nice skills ill try
+Einfach eine Sammlung von Skills, die ich ausprobieren möchte
 
 # PRDs
 - .claude\skills\grill-me
