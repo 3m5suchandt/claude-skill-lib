@@ -4,36 +4,7 @@ Kuratierte Sammlung von Claude Code Skills als Plugin Marketplace – kategorisi
 
 ## Installation
 
-### Als Plugin laden (empfohlen)
-
-```bash
-# Repo klonen
-git clone https://github.com/<dein-user>/claude-skill-lib ~/claude-skill-lib
-
-# Einzelne Kategorie laden
-claude --plugin-dir ~/claude-skill-lib/projektmanagement
-
-# Mehrere Kategorien laden
-claude --plugin-dir ~/claude-skill-lib/projektmanagement \
-       --plugin-dir ~/claude-skill-lib/entwicklung
-```
-
-### Global auf eigenem PC konfigurieren
-
-In `~/.claude/settings.json` eintragen (einmalig, gilt für alle Projekte):
-
-```json
-{
-  "pluginDirs": [
-    "~/claude-skill-lib/projektmanagement",
-    "~/claude-skill-lib/entwicklung"
-  ]
-}
-```
-
-### Via Claude Code Plugin-Marketplace (empfohlen)
-
-Einmalig den Marketplace hinzufügen – danach Plugins direkt aus Claude Code heraus installieren:
+Einmalig den Marketplace hinzufügen:
 
 ```
 /plugin marketplace add 3m5suchandt/claude-skill-lib
@@ -45,8 +16,6 @@ Dann einzelne Kategorien als Plugin installieren:
 /plugin install projektmanagement@claude-skill-lib
 /plugin install entwicklung@claude-skill-lib
 ```
-
-Nach der Installation sind die Skills in jeder Session automatisch verfügbar – kein `--plugin-dir` mehr nötig.
 
 ---
 
