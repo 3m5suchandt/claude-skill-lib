@@ -2,8 +2,6 @@
 Just a collection of nice skills ill try
 
 # PRDs
-credits to https://www.aihero.dev/5-agent-skills-i-use-every-day
-
 - .claude\skills\grill-me
 - .claude\skills\write-a-prd
 - .claude\skills\prd-to-issues
