@@ -1,6 +1,6 @@
 ---
 name: write-a-prd
-description: Create a PRD through user interview, codebase exploration, and module design, then submit as a GitHub issue. Use when user wants to write a PRD, create a product requirements document, or plan a new feature.
+description: Create a PRD through user interview, codebase exploration, and module design, then submit as a Jira issue (default) or GitHub issue. Use when user wants to write a PRD, create a product requirements document, or plan a new feature.
 ---
 
 This skill will be invoked when the user wants to create a PRD. You may skip steps if you don't consider them necessary.
@@ -17,7 +17,15 @@ A deep module (as opposed to a shallow module) is one which encapsulates a lot o
 
 Check with the user that these modules match their expectations. Check with the user which modules they want tests written for.
 
-5. Once you have a complete understanding of the problem and solution, use the template below to write the PRD. The PRD should be submitted as a GitHub issue.
+5. Once you have a complete understanding of the problem and solution, use the template below to write the PRD.
+
+Before creating the issue, ask the user:
+- **Where should the PRD be created?** Default: **Jira** (via Atlassian MCP). Alternative: GitHub issue (`gh`).
+- If Jira: which project should the issue be created in? (project key, e.g. `PROJ`)
+
+**Jira (default):** Create a Jira issue via Atlassian MCP with `issuetype: Story` (or the type requested by the user). Set summary = PRD title and description = PRD content.
+
+**GitHub (fallback):** Create a GitHub issue via `gh issue create`.
 
 <prd-template>
 
