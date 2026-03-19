@@ -1,19 +1,25 @@
 ---
 name: prd-to-issues
-description: Break a PRD into independently-grabbable GitHub issues using tracer-bullet vertical slices. Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items.
+description: Break a PRD into independently-grabbable Jira issues (default) or GitHub issues using tracer-bullet vertical slices. Use when user wants to convert a PRD to issues, create implementation tickets, or break down a PRD into work items.
 ---
 
 # PRD to Issues
 
-Break a PRD into independently-grabbable GitHub issues using vertical slices (tracer bullets).
+Break a PRD into independently-grabbable issues using vertical slices (tracer bullets).
 
 ## Process
 
-### 1. Locate the PRD
+### 1. Locate the PRD and clarify target system
 
-Ask the user for the PRD GitHub issue number (or URL).
+Ask the user:
+- **Where is the PRD and where should the issues be created?**
+  - Default: **Jira** (PRD as a Jira issue, new issues also as Jira issues via Atlassian MCP)
+  - Alternative: GitHub (PRD as a GitHub issue, new issues via `gh`)
+- If Jira: the Jira issue key of the PRD (e.g. `PROJ-42`) and the project key for new issues
+- If GitHub: issue number or URL of the PRD
 
-If the PRD is not already in your context window, fetch it with `gh issue view <number>` (with comments).
+**Jira:** Fetch the PRD via Atlassian MCP (`get_issue`).
+**GitHub:** Fetch the PRD with `gh issue view <number>` (with comments).
 
 ### 2. Explore the codebase (optional)
 
@@ -49,16 +55,23 @@ Ask the user:
 
 Iterate until the user approves the breakdown.
 
-### 5. Create the GitHub issues
+### 5. Create the issues
 
-For each approved slice, create a GitHub issue using `gh issue create`. Use the issue body template below.
+Create issues in dependency order (blockers first) so real issue numbers/keys can be referenced.
 
-Create issues in dependency order (blockers first) so you can reference real issue numbers in the "Blocked by" field.
+**Jira (default):** Create each issue via Atlassian MCP (`create_issue`) with:
+- `project`: the project key provided by the user
+- `issuetype`: Story (or Task, depending on slice type)
+- `summary`: slice title
+- `description`: content from the template below (ADF format if required)
+- Link blocker issues via `link_issues` (link type: "is blocked by")
+
+**GitHub (fallback):** Create each issue with `gh issue create`. Reference blockers with `#<issue-number>`.
 
 <issue-template>
 ## Parent PRD
 
-#<prd-issue-number>
+Jira: <prd-issue-key> (e.g. PROJ-42) | GitHub: #<prd-issue-number>
 
 ## What to build
 
@@ -72,7 +85,7 @@ A concise description of this vertical slice. Describe the end-to-end behavior, 
 
 ## Blocked by
 
-- Blocked by #<issue-number> (if any)
+- Blocked by <issue-key-or-number> (if any)
 
 Or "None - can start immediately" if no blockers.
 
