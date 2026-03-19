@@ -1,0 +1,8 @@
+{
+  "name": "design",
+  "description": "Design- und UI/UX-Skills (in Vorbereitung).",
+  "version": "0.1.0",
+  "author": { "name": "Jan" },
+  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
+  "license": "MIT"
+}

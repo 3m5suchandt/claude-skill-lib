@@ -4,30 +4,69 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A curated collection of AI agent skills installed via [`skills`](https://skills.sh) (the `npx skills@latest` CLI). Skills are markdown-based prompt files that extend Claude Code and other agents with specialized workflows.
+A Claude Code **Plugin Marketplace** – a curated collection of AI agent skills organized by category. Each category is a standalone plugin installable via the Claude Code plugin system.
 
-## Skill management
+## Plugin structure
 
-Install a skill from a GitHub source:
-
-```bash
-npx skills@latest add mattpocock/skills/<skill-name> --yes
+```
+claude-skill-lib/
+├── .claude-plugin/
+│   └── marketplace.json        ← marks this repo as a marketplace
+├── <category>/                 ← one plugin per category
+│   ├── .claude-plugin/
+│   │   └── plugin.json         ← plugin manifest (name, description, version)
+│   ├── README.md               ← German description of the category
+│   └── skills/
+│       └── <skill-name>/
+│           ├── SKILL.md        ← skill prompt (YAML frontmatter + instructions)
+│           └── README.md       ← German explanation of the skill
+└── skills-lock.json            ← tracks origin of externally sourced skills
 ```
 
-All installed skills are tracked in `skills-lock.json` (analogous to a package lock file). Skills are stored in two locations:
+## Current categories (plugins)
 
-- `.agents/skills/<name>/` – universal copy, shared with all agents
-- `.claude/skills/<name>/` – symlink to the `.agents` copy, used by Claude Code
+| Category | Plugin name | Skills |
+|----------|-------------|--------|
+| `projektmanagement/` | `projektmanagement` | grill-me, write-a-prd, prd-to-issues |
+| `entwicklung/` | `entwicklung` | tdd |
+| `design/` | `design` | _(empty, prepared)_ |
 
-## Repository structure
+## Loading plugins
 
-- `skills-lock.json` – records source and hash of each installed skill
-- `.agents/skills/<name>/SKILL.md` – the skill prompt loaded by agents
-- `.agents/skills/<name>/README.md` – German explanation of the skill (added manually)
-- `.claude/skills/` – symlinked into Claude Code's skill resolution path
+```bash
+# Per session (command line)
+claude --plugin-dir ./projektmanagement --plugin-dir ./entwicklung
+
+# Persistent global config (~/.claude/settings.json)
+{ "pluginDirs": ["~/claude-skill-lib/projektmanagement", "~/claude-skill-lib/entwicklung"] }
+```
+
+Skill invocation uses the plugin namespace: `/projektmanagement:grill-me`, `/entwicklung:tdd`
+
+## Adding a new skill
+
+1. Choose the right category (or create a new one, see below)
+2. Create `<category>/skills/<skill-name>/SKILL.md` with frontmatter:
+   ```yaml
+   ---
+   name: skill-name
+   description: What it does and when to use it. Claude uses this to auto-invoke.
+   ---
+   ```
+3. Add a German `<category>/skills/<skill-name>/README.md`
+4. Bump the version in `<category>/.claude-plugin/plugin.json`
+
+## Adding a new category
+
+1. `mkdir -p <category>/.claude-plugin <category>/skills`
+2. Create `<category>/.claude-plugin/plugin.json` (name, description, version, author)
+3. Create `<category>/README.md` (German overview)
+4. Add the category entry to `.claude-plugin/marketplace.json`
+5. Document in root `README.md`
 
 ## Conventions
 
-- Each skill directory gets a German `README.md` explaining its purpose, benefits, and how to invoke it.
-- The root `README.md` documents all skills with a short German summary.
-- Commits are kept semantically independent: one commit per concern (new skill install, new READMEs, root README update).
+- Skill and category names: lowercase, hyphens only
+- READMEs are written in German
+- `skills-lock.json` tracks externally sourced skills (from `mattpocock/skills` etc.)
+- Commits are kept semantically independent: one commit per concern

@@ -1,0 +1,23 @@
+{
+  "name": "claude-skill-lib",
+  "description": "Kuratierte Claude Code Skills nach Kategorien – Projektmanagement, Entwicklung, Design",
+  "owner": { "name": "Jan" },
+  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
+  "plugins": [
+    {
+      "name": "projektmanagement",
+      "source": "./projektmanagement",
+      "description": "PRD-Workflow: grill-me → write-a-prd → prd-to-issues"
+    },
+    {
+      "name": "entwicklung",
+      "source": "./entwicklung",
+      "description": "Test-Driven Development mit Red-Green-Refactor"
+    },
+    {
+      "name": "design",
+      "source": "./design",
+      "description": "Design- und UI/UX-Skills"
+    }
+  ]
+}
