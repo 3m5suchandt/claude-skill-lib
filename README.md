@@ -31,13 +31,22 @@ In `~/.claude/settings.json` eintragen (einmalig, gilt für alle Projekte):
 }
 ```
 
-### Marketplace hinzufügen (Claude Code Plugin-System)
+### Via Claude Code Plugin-Marketplace (empfohlen)
+
+Einmalig den Marketplace hinzufügen – danach Plugins direkt aus Claude Code heraus installieren:
 
 ```
-/plugin marketplace add <dein-user>/claude-skill-lib
+/plugin marketplace add 3m5suchandt/claude-skill-lib
+```
+
+Dann einzelne Kategorien als Plugin installieren:
+
+```
 /plugin install projektmanagement@claude-skill-lib
 /plugin install entwicklung@claude-skill-lib
 ```
+
+Nach der Installation sind die Skills in jeder Session automatisch verfügbar – kein `--plugin-dir` mehr nötig.
 
 ---
 
