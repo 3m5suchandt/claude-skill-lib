@@ -1,0 +1,8 @@
+{
+  "name": "prd-to-issues",
+  "description": "PRD in unabhängige Jira- oder GitHub-Issues zerlegen als vertikale Slices.",
+  "version": "1.0.0",
+  "author": { "name": "Jan" },
+  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
+  "license": "MIT"
+}

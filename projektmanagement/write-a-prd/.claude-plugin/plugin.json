@@ -1,0 +1,8 @@
+{
+  "name": "write-a-prd",
+  "description": "PRD erstellen durch Interview, Codebase-Analyse und Moduldesign – als Jira- oder GitHub-Issue.",
+  "version": "1.0.0",
+  "author": { "name": "Jan" },
+  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
+  "license": "MIT"
+}

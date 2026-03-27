@@ -1,0 +1,8 @@
+{
+  "name": "grill-me",
+  "description": "Hartnäckiges Interview zu Plan oder Design – bis zum gemeinsamen Verständnis.",
+  "version": "1.0.0",
+  "author": { "name": "Jan" },
+  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
+  "license": "MIT"
+}

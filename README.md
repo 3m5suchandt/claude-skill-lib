@@ -4,34 +4,34 @@ Kuratierte Sammlung von Claude Code Skills als Plugin Marketplace – kategorisi
 
 ## Installation
 
-Einmalig den Marketplace hinzufügen:
+Marketplace einmalig hinzufügen:
 
 ```
-/plugin marketplace add 3m5suchandt/claude-skill-lib
+/plugin marketplace add jan-suchandt/claude-skill-lib
 ```
 
-Dann einzelne Kategorien als Plugin installieren:
+Dann einzelne Skills direkt installieren:
 
 ```
-/plugin install projektmanagement@claude-skill-lib
-/plugin install entwicklung@claude-skill-lib
+/plugin install grill-me@claude-skill-lib
+/plugin install write-a-prd@claude-skill-lib
+/plugin install prd-to-issues@claude-skill-lib
+/plugin install tdd@claude-skill-lib
 ```
 
 ---
 
-## Kategorien
+## Skills
 
 ### [Projektmanagement](./projektmanagement/)
 
-Drei Skills, die zusammen vage Ideen in ausführbare GitHub-Issues überführen:
-
 | Skill | Befehl | Zweck |
 |-------|--------|-------|
-| grill-me | `/projektmanagement:grill-me` | Hartnäckige Rückfragen bis zum gemeinsamen Verständnis |
-| write-a-prd | `/projektmanagement:write-a-prd` | Idee → strukturiertes PRD als GitHub Issue |
-| prd-to-issues | `/projektmanagement:prd-to-issues` | PRD → unabhängige GitHub Issues (vertikale Slices) |
+| grill-me | `/grill-me` | Hartnäckige Rückfragen bis zum gemeinsamen Verständnis |
+| write-a-prd | `/write-a-prd` | Idee → strukturiertes PRD als Jira- oder GitHub-Issue |
+| prd-to-issues | `/prd-to-issues` | PRD → unabhängige Issues (vertikale Slices) |
 
-**Workflow:** `grill-me` → `write-a-prd` → `prd-to-issues`
+**Workflow:** `/grill-me` → `/write-a-prd` → `/prd-to-issues`
 
 Quelle: https://www.aihero.dev/5-agent-skills-i-use-every-day
 
@@ -41,7 +41,7 @@ Quelle: https://www.aihero.dev/5-agent-skills-i-use-every-day
 
 | Skill | Befehl | Zweck |
 |-------|--------|-------|
-| tdd | `/entwicklung:tdd` | Red-Green-Refactor, verhaltensbasierte Tests |
+| tdd | `/tdd` | Red-Green-Refactor, verhaltensbasierte Tests |
 
 Quelle: https://github.com/mattpocock/skills
 
@@ -55,8 +55,8 @@ Zukünftige Skills für Design- und UI/UX-Workflows.
 
 ## Neuen Skill hinzufügen
 
-1. Passende Kategorie wählen (oder neue anlegen: `mkdir <kategorie>/skills/<skill-name>`)
-2. `<kategorie>/skills/<skill-name>/SKILL.md` erstellen (Frontmatter: `name`, `description`)
-3. `<kategorie>/skills/<skill-name>/README.md` mit deutscher Erklärung anlegen
-4. In `<kategorie>/.claude-plugin/plugin.json` ggf. Version erhöhen
-5. In `.claude-plugin/marketplace.json` ggf. neue Kategorie eintragen
+1. Passende Kategorie wählen
+2. `<kategorie>/<skill-name>/.claude-plugin/plugin.json` erstellen (`name` = skill-name)
+3. `<kategorie>/<skill-name>/skills/<skill-name>/SKILL.md` erstellen (Frontmatter: `name`, `description`)
+4. `<kategorie>/<skill-name>/README.md` mit deutscher Erklärung anlegen
+5. Eintrag in `.claude-plugin/marketplace.json` hinzufügen

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A Claude Code **Plugin Marketplace** – a curated collection of AI agent skills organized by category. Each category is a standalone plugin installable via the Claude Code plugin system.
+A Claude Code **Plugin Marketplace** – a curated collection of AI agent skills organized by category. Each skill is a standalone plugin installable via the Claude Code plugin system.
 
 ## Plugin structure
 
@@ -12,57 +12,62 @@ A Claude Code **Plugin Marketplace** – a curated collection of AI agent skills
 claude-skill-lib/
 ├── .claude-plugin/
 │   └── marketplace.json        ← marks this repo as a marketplace
-├── <category>/                 ← one plugin per category
-│   ├── .claude-plugin/
-│   │   └── plugin.json         ← plugin manifest (name, description, version)
+├── <category>/                 ← organizational grouping (not a plugin)
 │   ├── README.md               ← German description of the category
-│   └── skills/
-│       └── <skill-name>/
-│           ├── SKILL.md        ← skill prompt (YAML frontmatter + instructions)
-│           └── README.md       ← German explanation of the skill
+│   └── <skill-name>/           ← one plugin per skill
+│       ├── .claude-plugin/
+│       │   └── plugin.json     ← plugin manifest (name = skill-name)
+│       ├── README.md           ← German explanation of the skill
+│       └── skills/
+│           └── <skill-name>/
+│               └── SKILL.md   ← skill prompt (YAML frontmatter + instructions)
 └── skills-lock.json            ← tracks origin of externally sourced skills
 ```
 
-## Current categories (plugins)
+**Key principle:** Plugin name = skill name → invocation is `/skill-name` (no namespace prefix needed).
 
-| Category | Plugin name | Skills |
-|----------|-------------|--------|
-| `projektmanagement/` | `projektmanagement` | grill-me, write-a-prd, prd-to-issues |
-| `entwicklung/` | `entwicklung` | tdd |
-| `design/` | `design` | _(empty, prepared)_ |
+## Current skills
 
-## Loading plugins
+| Category | Skill | Invocation |
+|----------|-------|------------|
+| `projektmanagement/` | `grill-me` | `/grill-me` |
+| `projektmanagement/` | `write-a-prd` | `/write-a-prd` |
+| `projektmanagement/` | `prd-to-issues` | `/prd-to-issues` |
+| `entwicklung/` | `tdd` | `/tdd` |
+
+## Installing skills
 
 ```bash
+# Via marketplace
+/plugin marketplace add jan-suchandt/claude-skill-lib
+/plugin install grill-me@claude-skill-lib
+
 # Per session (command line)
-claude --plugin-dir ./projektmanagement --plugin-dir ./entwicklung
+claude --plugin-dir ./projektmanagement/grill-me
 
 # Persistent global config (~/.claude/settings.json)
-{ "pluginDirs": ["~/claude-skill-lib/projektmanagement", "~/claude-skill-lib/entwicklung"] }
+{ "pluginDirs": ["~/claude-skill-lib/projektmanagement/grill-me"] }
 ```
-
-Skill invocation uses the plugin namespace: `/projektmanagement:grill-me`, `/entwicklung:tdd`
 
 ## Adding a new skill
 
 1. Choose the right category (or create a new one, see below)
-2. Create `<category>/skills/<skill-name>/SKILL.md` with frontmatter:
+2. Create `<category>/<skill-name>/.claude-plugin/plugin.json` with `"name": "<skill-name>"`
+3. Create `<category>/<skill-name>/skills/<skill-name>/SKILL.md` with frontmatter:
    ```yaml
    ---
    name: skill-name
    description: What it does and when to use it. Claude uses this to auto-invoke.
    ---
    ```
-3. Add a German `<category>/skills/<skill-name>/README.md`
-4. Bump the version in `<category>/.claude-plugin/plugin.json`
+4. Add a German `<category>/<skill-name>/README.md`
+5. Add an entry to `.claude-plugin/marketplace.json`
 
 ## Adding a new category
 
-1. `mkdir -p <category>/.claude-plugin <category>/skills`
-2. Create `<category>/.claude-plugin/plugin.json` (name, description, version, author)
-3. Create `<category>/README.md` (German overview)
-4. Add the category entry to `.claude-plugin/marketplace.json`
-5. Document in root `README.md`
+1. `mkdir -p <category>`
+2. Create `<category>/README.md` (German overview)
+3. Add skills inside it (see above)
 
 ## Conventions
 

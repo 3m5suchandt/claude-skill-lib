@@ -5,19 +5,28 @@
   "repository": "https://github.com/jan-suchandt/claude-skill-lib",
   "plugins": [
     {
-      "name": "projektmanagement",
-      "source": "./projektmanagement",
-      "description": "PRD-Workflow: grill-me → write-a-prd → prd-to-issues"
+      "name": "grill-me",
+      "source": "./projektmanagement/grill-me",
+      "description": "Hartnäckiges Interview zu Plan oder Design bis zum gemeinsamen Verständnis",
+      "category": "projektmanagement"
     },
     {
-      "name": "entwicklung",
-      "source": "./entwicklung",
-      "description": "Test-Driven Development mit Red-Green-Refactor"
+      "name": "write-a-prd",
+      "source": "./projektmanagement/write-a-prd",
+      "description": "PRD erstellen durch Interview, Codebase-Analyse und Moduldesign",
+      "category": "projektmanagement"
     },
     {
-      "name": "design",
-      "source": "./design",
-      "description": "Design- und UI/UX-Skills"
+      "name": "prd-to-issues",
+      "source": "./projektmanagement/prd-to-issues",
+      "description": "PRD in unabhängige Jira- oder GitHub-Issues zerlegen als vertikale Slices",
+      "category": "projektmanagement"
+    },
+    {
+      "name": "tdd",
+      "source": "./entwicklung/tdd",
+      "description": "Test-Driven Development nach Red-Green-Refactor mit verhaltensbasierten Tests",
+      "category": "entwicklung"
     }
   ]
 }

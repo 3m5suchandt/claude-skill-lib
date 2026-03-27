@@ -1,17 +1,10 @@
-# Entwicklung-Plugin
+# Entwicklungs-Skills
 
-Dieses Plugin implementiert testgetriebene Entwicklung (TDD) nach dem Red-Green-Refactor-Prinzip.
-
-## Installation
-
-```bash
-# Als Plugin laden (einmalig pro Session oder global konfigurieren)
-claude --plugin-dir /pfad/zu/claude-skill-lib/entwicklung
-```
+Skills für testgetriebene und qualitätsorientierte Entwicklung.
 
 ## Enthaltene Skills
 
-### `/entwicklung:tdd`
+### `/tdd`
 Implementiert TDD nach **Red-Green-Refactor**. Testet ausschließlich Verhalten über öffentliche Schnittstellen – keine Implementierungsdetails.
 
 **Kernprinzipien:**

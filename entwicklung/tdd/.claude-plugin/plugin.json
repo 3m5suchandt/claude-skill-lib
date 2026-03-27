@@ -1,0 +1,8 @@
+{
+  "name": "tdd",
+  "description": "Test-Driven Development nach Red-Green-Refactor mit verhaltensbasierten Tests.",
+  "version": "1.0.0",
+  "author": { "name": "Jan" },
+  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
+  "license": "MIT"
+}
