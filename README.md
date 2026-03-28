@@ -45,6 +45,12 @@ Quelle: https://www.aihero.dev/5-agent-skills-i-use-every-day
 
 Quelle: https://github.com/mattpocock/skills
 
+#### MCP-Server
+
+| Server | Zweck |
+|--------|-------|
+| [gitlab-mcp](https://github.com/zereight/gitlab-mcp) | GitLab-Integration für Claude: Issues, Merge Requests, Repositories und Pipelines direkt aus dem Chat steuern |
+
 ---
 
 ### [Design](./design/) _(in Vorbereitung)_
