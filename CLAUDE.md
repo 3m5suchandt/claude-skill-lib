@@ -70,7 +70,7 @@ Skill invocation uses the plugin namespace: `/projektmanagement:grill-me`, `/ent
 - READMEs are written in German
 - `skills-lock.json` tracks externally sourced skills (from `mattpocock/skills` etc.)
 - Commits are kept semantically independent: one commit per concern
-- All `.md` files are written in German, in a personal tone, and visually structured with emojis, tables, and code blocks
+- All `.md` files are written in German, in a personal tone ("mein Setup", "ich nutze"), and visually structured with emojis, tables, badges, and code blocks
 
 ## Documentation consistency
 
