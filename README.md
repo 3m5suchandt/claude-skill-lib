@@ -75,3 +75,4 @@ Alle MCP-Server im Detail: [mcps.md](./mcps.md)
 
 - [Alle Plugins & Skills](./plugins.md)
 - [Alle MCP-Server](./mcps.md)
+- [Best Practices](./best-practices.md)

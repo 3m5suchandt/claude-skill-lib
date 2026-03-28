@@ -70,3 +70,15 @@ Skill invocation uses the plugin namespace: `/projektmanagement:grill-me`, `/ent
 - READMEs are written in German
 - `skills-lock.json` tracks externally sourced skills (from `mattpocock/skills` etc.)
 - Commits are kept semantically independent: one commit per concern
+- All `.md` files are written in German, in a personal tone, and visually structured with emojis, tables, and code blocks
+
+## Documentation consistency
+
+Whenever skills, plugins, MCPs, or best practices change, update all affected root-level `.md` files to keep the documentation in sync:
+
+| File | Update when... |
+|------|----------------|
+| `README.md` | A plugin, skill, MCP, or category is added/removed/renamed |
+| `plugins.md` | A skill or plugin is added, removed, or its purpose changes |
+| `mcps.md` | An MCP server is added, removed, or its purpose changes |
+| `best-practices.md` | A new Claude Code tip or workflow is adopted |
