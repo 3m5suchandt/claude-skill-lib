@@ -2,7 +2,7 @@
 
 > Mein Claude-Setup als Marketplace – Skills, Plugins und MCPs, die ich täglich einsetze und die du direkt übernehmen kannst.
 
-![Skills](https://img.shields.io/badge/Skills-4-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
+![Skills](https://img.shields.io/badge/Skills-5-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
 
 ---
 
@@ -33,18 +33,20 @@ Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https
 
 ### 🗂️ Projektmanagement
 
-Drei Skills, die zusammen vage Ideen in ausführbare Issues überführen:
+Vier Skills, die zusammen vage Ideen in ausführbare Issues überführen – und rohe Kundenwünsche in entwicklungsfertige User Stories:
 
 | Skill | Befehl | Zweck |
 |-------|--------|-------|
 | grill-me | `/projektmanagement:grill-me` | Hartnäckige Rückfragen bis zum gemeinsamen Verständnis |
 | write-a-prd | `/projektmanagement:write-a-prd` | Idee → strukturiertes PRD als Jira- oder GitHub-Issue |
 | prd-to-issues | `/projektmanagement:prd-to-issues` | PRD → unabhängige Issues nach Vertical-Slice-Prinzip |
+| storytelling | `/projektmanagement:storytelling` | Kundenwunsch → sprint-fertige User Stories (Connextra, Gherkin, INVEST, SPIDR) |
 
 **Workflow:**
 
 ```
 💡 Idee  →  /grill-me  →  /write-a-prd  →  /prd-to-issues  →  ✅ Issues
+🗣️ Kundenwunsch  →  /storytelling  →  ✅ User Stories
 ```
 
 Quelle: [aihero.dev](https://www.aihero.dev/5-agent-skills-i-use-every-day)
