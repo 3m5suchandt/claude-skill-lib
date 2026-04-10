@@ -71,6 +71,22 @@ Alle MCP-Server im Detail: [mcps.md](./mcps.md)
 
 ---
 
+## 💡 Tipps & Best Practices
+
+Einstellungen und Workflows, die ich täglich nutze:
+
+| Tipp | Kurzbeschreibung |
+|------|-----------------|
+| 🗺️ **Plan Mode** | Claude plant zuerst, ohne Code zu ändern – per `/plan`-Präfix oder `Shift+Tab` |
+| ⚡ **Plan + Auto Mode** | Nach Plan-Freigabe übernimmt Auto Mode automatisch – kein Klicken mehr |
+| 🤖 **Auto Mode** | Classifier prüft jede Aktion im Hintergrund, keine manuellen Permission-Prompts |
+| **@ Kontext** | `@datei.ts`, `@ordner/` oder `@url` – Dateien gezielt in den Kontext laden |
+| 🎨 **Output Style** | `Explanatory` erklärt Entscheidungen, `Learning` setzt `TODO(human)`-Marker |
+
+Alle Details: [best-practices.md](./best-practices.md)
+
+---
+
 ## 📋 Referenz
 
 - [Alle Plugins & Skills](./plugins.md)
