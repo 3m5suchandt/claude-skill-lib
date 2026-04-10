@@ -90,3 +90,4 @@ mit Upload, Versionierung, Freigabeworkflow und DSGVO-konformer Archivierung.
 ## Weitere Informationen
 
 - [Hintergrund & Methodik](background.md)
+- [Antipatterns](antipatterns.md)
