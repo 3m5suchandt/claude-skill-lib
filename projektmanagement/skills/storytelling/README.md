@@ -6,37 +6,6 @@ Verwandelt rohe Kundenwünsche in entwicklungsfertige User Stories — strukturi
 
 ---
 
-## Der Prozess auf einen Blick
-
-```mermaid
-flowchart TD
-    A([Kundenwunsch\nFreitext · Jira · Confluence]) --> B{Vage?}
-
-    B -- Ja --> C["Phase 1 · Strategische Klärung\n🔍 grill-me: Warum? Für wen? Welcher Wert?\n→ PRD als Leitplanke"]
-    B -- Nein --> D
-
-    C --> D["Phase 2 · Taktische Detaillierung\n🔍 grill-me: Decision Tree\nHappy Path · Edge Cases · Fehler · Regeln"]
-
-    D --> E["Phase 3 · Formalisierung\n📋 3C-Modell\nCard · Conversation · Confirmation"]
-
-    E --> F{"INVEST\nCheck"}
-
-    F -- "Alle ✅" --> G["Phase 6 · Ausgabe\n🚀 Jira Issue oder Markdown"]
-    F -- "Mind. 1 ❌" --> H["Phase 5 · SPIDR Slicing\n✂️ Epic → Sprint-fähige Stories\nS · P · I · D · R"]
-
-    H --> E
-
-    style A fill:#4A90D9,color:#fff,stroke:none
-    style C fill:#7B68EE,color:#fff,stroke:none
-    style D fill:#7B68EE,color:#fff,stroke:none
-    style E fill:#2ECC71,color:#fff,stroke:none
-    style F fill:#F39C12,color:#fff,stroke:none
-    style H fill:#E74C3C,color:#fff,stroke:none
-    style G fill:#27AE60,color:#fff,stroke:none
-```
-
----
-
 ## Nutzen für Projektleiter
 
 | Problem im Alltag | Was der Skill löst |
