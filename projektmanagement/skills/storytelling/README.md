@@ -2,6 +2,8 @@
 
 Verwandelt rohe Kundenwünsche in entwicklungsfertige User Stories — strukturiert, methodisch sauber, direkt ins Jira oder als Markdown.
 
+![storytelling](illustration.png)
+
 ---
 
 ## Der Prozess auf einen Blick
