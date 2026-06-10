@@ -232,6 +232,63 @@ Flag patterns across the deck:
 
 ---
 
+## Stage presentations (10 m+ viewing distance)
+
+When slides are shown on a stage or projected in a room — not viewed on a
+personal screen — the physical distance between audience and screen imposes
+hard constraints that override any desktop-centric sizing defaults.
+
+### Why it matters
+
+At 10 m viewing distance with a typical 2–3 m wide projection screen,
+a character must be at least ~3 cm tall to be legible (Burford 1994;
+ANSI/SMPTE presentation standards). In a 1920 × 1080 HTML presentation
+running full-screen that translates to roughly:
+
+- Body text minimum: **2 rem (32 px ≈ 24 pt)** — absolute floor
+- Slide titles: **3 rem (48 px ≈ 36 pt)** minimum
+- Hero / section titles: **5 rem (80 px ≈ 60 pt)**
+- Labels and captions: **1.5 rem (24 px ≈ 18 pt)** — only for non-critical UI chrome
+- Nothing below **1.25 rem (20 px)** on any visible element
+
+Projectors and large screens compress contrast (gamma shift, ambient light,
+keystoning). Apply a minimum **7 : 1** contrast ratio — not just WCAG AA
+4.5 : 1 — for text against its background.
+
+### Font weight matters at distance
+
+Thin and regular weights disappear. Use **medium (500) or semibold (600)** for
+body text; **bold (700–800)** for headings. Light and thin weights are
+invisible beyond 8 m.
+
+### Density limit per slide
+
+With stage-appropriate font sizes, a slide can hold far fewer items before
+it becomes unreadable. Count elements before finalising a slide:
+
+| Element type       | Max at 2 rem body / 3 rem title |
+|--------------------|----------------------------------|
+| Bullet points      | 3–4 (not 6–8)                    |
+| Table rows         | 4–5 (not 8+)                     |
+| Columns in a table | 3 (not 5+)                       |
+| Parallel cards     | 2 (not 3–4)                      |
+
+If content exceeds these limits, split into multiple slides (Rule 1).
+
+### Stage checklist
+
+When reviewing a deck intended for stage use, add these checks:
+
+- [ ] Body text ≥ 2 rem (32 px) on all slides
+- [ ] Slide titles ≥ 3 rem (48 px)
+- [ ] No text below 1.5 rem (24 px) — even labels, captions, footnotes
+- [ ] Font weight: medium or bold only — no thin or light
+- [ ] Contrast ≥ 7 : 1 for all text (projector gamma shift)
+- [ ] Max 3–4 bullet points per slide
+- [ ] Every element passes a "thumbnail test": legible at 200 × 113 px preview
+
+---
+
 ## Companion reference
 
 `presentation-slides-guidelines.md` — full narrative explanations of all 10
