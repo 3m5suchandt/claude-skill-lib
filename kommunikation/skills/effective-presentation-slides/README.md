@@ -46,6 +46,21 @@ Ein peer-reviewtes Framework aus der Wissenschaftskommunikation mit konkreten Re
 
 ---
 
+## ✦ With or without
+
+Gleicher Inhalt. Gleiches Design-Framework. Nur die Content-Entscheidungen unterscheiden sich – und der Unterschied ist sofort sichtbar.
+
+| Folie | Ohne Skill | Mit Skill |
+|-------|-----------|-----------|
+| **Einstieg** | Agenda-Liste + beschreibender Titel „PRD & BRD – Eine Einführung" | Hero-Statement: **„BRD fragt Warum. PRD fragt Was."** |
+| **Hauptinhalt** | 7 Bulletpoints in einer Textkarte – Publikum muss lesen statt zuhören | Zwei farbkodierte Rollenkarten – Kontrast ist *sichtbar*, nicht erklärt |
+| **Reihenfolge** | 4 Prosa-Absätze – der Vortragende liest die Folie vor | Flow-Diagramm BRD → PRD → Teams – Richtung sieht man, kein Wort nötig |
+| **Titel** | Beschreibend: „Unterschiede zwischen BRD und PRD" | Fazit-Satz: „Vier Dimensionen trennen BRD und PRD grundlegend." |
+
+**Was das zeigt:** Schönes Design rettet keine schlechten Content-Entscheidungen. Beide Versionen verwenden dasselbe Glassmorphism-Framework, dieselben Fonts, dieselbe Farbpalette. Was sie trennt, sind ausschließlich die Entscheidungen, die dieser Skill adressiert: Welches Fazit steht im Titel? Welche Information wird gezeigt statt beschrieben? Wie viele Ideen hat diese eine Folie?
+
+---
+
 ## 🎥 Zeigen statt beschreiben
 
 Anton Tschechow riet Schriftstellern: Schreib nicht *"Es war eine mondbeglänzte Nacht"* – zeig, wie das Mondlicht auf den Scherben glitzert. Dasselbe Prinzip gilt für Folien.
