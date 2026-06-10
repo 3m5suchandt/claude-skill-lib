@@ -18,6 +18,11 @@
       "name": "design",
       "source": "./design",
       "description": "Design- und UI/UX-Skills"
+    },
+    {
+      "name": "kommunikation",
+      "source": "./kommunikation",
+      "description": "Präsentations- und Kommunikations-Skills: evidenzbasierte Foliengestaltung, Storytelling und Wissenstransfer"
     }
   ]
 }
