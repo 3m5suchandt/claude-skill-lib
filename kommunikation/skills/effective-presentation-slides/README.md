@@ -48,16 +48,51 @@ Ein peer-reviewtes Framework aus der Wissenschaftskommunikation mit konkreten Re
 
 ## ✦ With or without
 
-Gleicher Inhalt. Gleiches Design-Framework. Nur die Content-Entscheidungen unterscheiden sich – und der Unterschied ist sofort sichtbar.
+Gleicher Inhalt. Gleiches Design-Framework. Nur die Content-Entscheidungen unterscheiden sich.
 
-| Folie | Ohne Skill | Mit Skill |
-|-------|-----------|-----------|
-| **Einstieg** | Agenda-Liste + beschreibender Titel „PRD & BRD – Eine Einführung" | Hero-Statement: **„BRD fragt Warum. PRD fragt Was."** |
-| **Hauptinhalt** | 7 Bulletpoints in einer Textkarte – Publikum muss lesen statt zuhören | Zwei farbkodierte Rollenkarten – Kontrast ist *sichtbar*, nicht erklärt |
-| **Reihenfolge** | 4 Prosa-Absätze – der Vortragende liest die Folie vor | Flow-Diagramm BRD → PRD → Teams – Richtung sieht man, kein Wort nötig |
-| **Titel** | Beschreibend: „Unterschiede zwischen BRD und PRD" | Fazit-Satz: „Vier Dimensionen trennen BRD und PRD grundlegend." |
+**Thema:** Was ist der Unterschied zwischen BRD und PRD?
 
-**Was das zeigt:** Schönes Design rettet keine schlechten Content-Entscheidungen. Beide Versionen verwenden dasselbe Glassmorphism-Framework, dieselben Fonts, dieselbe Farbpalette. Was sie trennt, sind ausschließlich die Entscheidungen, die dieser Skill adressiert: Welches Fazit steht im Titel? Welche Information wird gezeigt statt beschrieben? Wie viele Ideen hat diese eine Folie?
+---
+
+### ⚠ Ohne Skill
+
+**Titel:** Was ist eine BRD?
+
+> - Ein Business Requirements Document beschreibt die Geschäftsziele eines Projekts
+> - Es wird in der frühen Projektphase erstellt, bevor das PRD entsteht
+> - Verantwortlich ist in der Regel der Product Owner oder Business Analyst
+> - BRD enthält Stakeholder-Analyse, Business Case und ROI-Abschätzung
+> - Das Dokument richtet sich primär an das Management und die Auftraggeber
+> - Typischer Umfang: 10–50 Seiten
+> - BRD wird formal genehmigt, bevor das PRD beginnt
+
+Sieben Punkte. Das Publikum liest – und hört dabei auf zuzuhören. Bis Punkt vier sind die ersten drei vergessen.
+
+---
+
+### ✓ Mit Skill
+
+**Titel:** BRD fragt Warum. PRD fragt Was.
+
+> **BRD** · Business Requirements Document — *Warum bauen wir das?*
+> Stakeholder · Business Case · ROI · Management-Entscheidung
+>
+> **PRD** · Product Requirements Document — *Was bauen wir?*
+> Features · Scope · Akzeptanzkriterien · Team-Umsetzung
+
+Derselbe Inhalt. Eine Botschaft pro Folie. Kein Text, den man lesen muss, während man zuhört.
+
+---
+
+**Was den Unterschied macht:**
+
+| | Ohne Skill | Mit Skill |
+|--|--|--|
+| **Regel 3** | Titel benennt das Thema: *„Was ist eine BRD?"* | Titel ist das Fazit: *„BRD fragt Warum. PRD fragt Was."* |
+| **Regel 6** | Sieben Fließtextpunkte – kein Visual | Zwei Karten machen den Kontrast *sichtbar* statt erklärbar |
+| **Regel 7** | Lesen blockiert den Zuhörkanal | Visueller Kanal und Audiokanal laufen parallel |
+
+Schönes Design rettet keine schlechten Content-Entscheidungen. Was beide Versionen trennt, ist ausschließlich die Frage: *Welches Fazit steht im Titel? Was wird gezeigt statt beschrieben? Wie viele Ideen hat diese eine Folie?*
 
 ---
 
