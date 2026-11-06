@@ -6,7 +6,7 @@
     {
       "name": "pm-privat",
       "source": "./projektmanagement",
-      "description": "PRD-Workflow: grill-me → write-a-prd → prd-to-issues"
+      "description": "PRD-Workflow (write-a-prd → prd-to-issues) und lift-me"
     },
     {
       "name": "entwicklung",

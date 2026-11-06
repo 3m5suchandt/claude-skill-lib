@@ -1,7 +1,7 @@
 {
   "name": "pm-privat",
-  "description": "PRD-Workflow: grill-me → write-a-prd → prd-to-issues. Überführt vage Ideen in ausführbare GitHub Issues.",
-  "version": "1.1.0",
+  "description": "PRD-Workflow (write-a-prd → prd-to-issues) und lift-me. Überführt vage Ideen in ausführbare Issues und Lösungen zurück auf ihr Ziel.",
+  "version": "2.0.0",
   "author": { "name": "Jan" },
   "repository": "https://github.com/3m5suchandt/claude-skill-lib",
   "license": "MIT"

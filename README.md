@@ -2,7 +2,7 @@
 
 > Mein Claude-Setup als Marketplace – Skills, Plugins und MCPs, die ich täglich einsetze und die du direkt übernehmen kannst.
 
-![Skills](https://img.shields.io/badge/Skills-7-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
+![Skills](https://img.shields.io/badge/Skills-5-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
 
 ---
 
@@ -10,8 +10,8 @@ Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https
 
 | Typ | Was es ist | Beispiel |
 |-----|------------|---------|
-| 🛠️ **Skill** | Ein Slash-Befehl, den Claude ausführt | `/grill-me` |
-| 📦 **Plugin** | Installationseinheit, die Skills bündelt | `projektmanagement` |
+| 🛠️ **Skill** | Ein Slash-Befehl, den Claude ausführt | `/lift-me` |
+| 📦 **Plugin** | Installationseinheit, die Skills bündelt | `pm-privat` |
 | 🔌 **MCP-Server** | Externer Dienst, den Claude als Werkzeug nutzt | `gitlab-mcp` |
 
 ---
@@ -33,21 +33,18 @@ Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https
 
 ### 🗂️ Projektmanagement
 
-Fünf Skills, die vage Ideen in ausführbare Issues überführen, rohe Kundenwünsche in entwicklungsfertige User Stories – und Lösungen auf ihr eigentliches Ziel zurückführen:
+Drei Skills, die vage Ideen in ausführbare Issues überführen – und Lösungen auf ihr eigentliches Ziel zurückführen. `grill-me` und `storytelling` nutze ich aus dem 3m5. Plugin Hub (`/shared:grill-me`, `/projektmanagement:storytelling`).
 
 | Skill | Befehl | Zweck |
 |-------|--------|-------|
-| grill-me | `/pm-privat:grill-me` | Hartnäckige Rückfragen bis zum gemeinsamen Verständnis |
 | write-a-prd | `/pm-privat:write-a-prd` | Idee → strukturiertes PRD als Jira- oder GitHub-Issue |
 | prd-to-issues | `/pm-privat:prd-to-issues` | PRD → unabhängige Issues nach Vertical-Slice-Prinzip |
-| storytelling | `/pm-privat:storytelling` | Kundenwunsch → sprint-fertige User Stories (Connextra, Gherkin, INVEST, SPIDR) |
 | lift-me | `/pm-privat:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me |
 
 **Workflow:**
 
 ```
-💡 Idee  →  /grill-me  →  /write-a-prd  →  /prd-to-issues  →  ✅ Issues
-🗣️ Kundenwunsch  →  /storytelling  →  ✅ User Stories
+💡 Idee  →  /write-a-prd  →  /prd-to-issues  →  ✅ Issues
 🎯 Lösung  →  /lift-me  →  ✅ Zielleiter & Nordstern
 ```
 
