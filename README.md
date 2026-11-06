@@ -50,16 +50,16 @@ Damit neue Versionen automatisch ankommen, `autoUpdate` für den Marketplace in 
 
 `/jasu:lift-me`
 
-Wenn ich mich in technischen Details verliere, klettert `lift-me` mit „Wozu?“-Fragen von meiner Lösung hoch zum Ziel hinter dem Ziel. Am Ende habe ich eine Zielleiter, eine bewusst gewählte Arbeitshöhe mit ehrgeiziger Messgröße und Alternativen, die meine ursprüngliche Lösung schlagen könnten. Damit ist er das Gegenstück zu grill-me, das vom Plan aus nach unten in die Details bohrt.
+Wenn du dich in technischen Details verlierst, klettert `lift-me` mit „Wozu?“-Fragen von deiner Lösung hoch zum Ziel hinter dem Ziel. Am Ende hast du eine Zielleiter, eine bewusst gewählte Arbeitshöhe mit ehrgeiziger Messgröße und Alternativen, die deine ursprüngliche Lösung schlagen könnten. Damit ist er das Gegenstück zu grill-me, das vom Plan aus nach unten in die Details bohrt.
 
 ### 🧪 [tdd](./skills/tdd/)
 
 `/jasu:tdd` · übernommen aus [mattpocock/skills](https://github.com/mattpocock/skills)
 
-Claude entwickelt in kleinen Red-Green-Refactor-Zyklen: erst ein fehlschlagender Test, dann genau so viel Code, dass er besteht, dann der nächste Test. Weil die Tests nur Verhalten über öffentliche Schnittstellen prüfen, überleben sie Refactorings und lesen sich wie eine Spezifikation. So entsteht kein spekulativer Code, und Fehler fallen sofort auf.
+Claude entwickelt für dich in kleinen Red-Green-Refactor-Zyklen: erst ein fehlschlagender Test, dann genau so viel Code, dass er besteht, dann der nächste Test. Weil die Tests nur Verhalten über öffentliche Schnittstellen prüfen, überstehen sie deine Refactorings und lesen sich wie eine Spezifikation. Du bekommst keinen spekulativen Code, und Fehler fallen dir sofort auf.
 
 ### 🎯 [effective-presentation-slides](./skills/effective-presentation-slides/)
 
 `/jasu:effective-presentation-slides`
 
-Der Skill wendet Befunde aus der Gedächtnisforschung auf Foliensätze an, etwa Dual Coding, Mayers Multimedia-Prinzip und die zehn Regeln von Naegle. Er gliedert neue Decks, macht aus beschreibenden Titeln Aussagesätze und findet in bestehenden Decks überladene Folien. Mein Publikum nimmt so pro Folie genau eine Botschaft mit, statt gleichzeitig lesen und zuhören zu müssen.
+Der Skill wendet Befunde aus der Gedächtnisforschung auf deine Foliensätze an, etwa Dual Coding, Mayers Multimedia-Prinzip und die zehn Regeln von Naegle. Er gliedert deine neuen Decks, macht aus beschreibenden Titeln Aussagesätze und findet in bestehenden Decks überladene Folien. Dein Publikum nimmt so pro Folie genau eine Botschaft mit, statt gleichzeitig lesen und zuhören zu müssen.

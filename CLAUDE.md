@@ -25,6 +25,6 @@ No `version` anywhere (neither `plugin.json` nor marketplace entries). Updates a
 - The plugin name `jasu` is the slash-command prefix. Don't rename it, and never use a plugin name from the 3m5. Plugin Hub (e.g. `projektmanagement`, `shared`) – the namespaces would collide.
 - `skills-lock.json` tracks skills copied from external sources (e.g. `mattpocock/skills`).
 - Skill, plugin and folder names: lowercase, hyphens only.
-- All `.md` files except this one: German, personal tone ("ich nutze"), structured with emojis, tables and code blocks.
+- All `.md` files except this one: German, structured with emojis, tables and code blocks. `README.md` addresses the reader as „du“; skill READMEs keep the personal tone („ich nutze“).
 - `README.md` is for people using the skills, not developers: installation in Claude Cowork and Claude Code, and what each skill is good for. No repo structure, maintenance, versioning, `--plugin-dir` or other testing – that belongs in this file.
 - One commit per concern.
