@@ -27,9 +27,11 @@ claude-skill-lib/
 
 | Category | Plugin name | Skills |
 |----------|-------------|--------|
-| `projektmanagement/` | `projektmanagement` | grill-me, write-a-prd, prd-to-issues |
+| `projektmanagement/` | `pm-privat` | grill-me, write-a-prd, prd-to-issues, lift-me |
 | `entwicklung/` | `entwicklung` | tdd |
 | `design/` | `design` | _(empty, prepared)_ |
+
+The plugin in `projektmanagement/` is named `pm-privat` on purpose: `projektmanagement@3m5-skill-hub` is installed alongside it, and two plugins with the same name would share the `/projektmanagement:` namespace. Keep the names different.
 
 ## Loading plugins
 
@@ -41,7 +43,7 @@ claude --plugin-dir ./projektmanagement --plugin-dir ./entwicklung
 { "pluginDirs": ["~/claude-skill-lib/projektmanagement", "~/claude-skill-lib/entwicklung"] }
 ```
 
-Skill invocation uses the plugin namespace: `/projektmanagement:grill-me`, `/entwicklung:tdd`
+Skill invocation uses the plugin namespace: `/pm-privat:grill-me`, `/entwicklung:tdd`
 
 ## Adding a new skill
 
