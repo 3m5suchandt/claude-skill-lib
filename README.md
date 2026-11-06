@@ -32,6 +32,17 @@ Damit jeder Push auf `main` automatisch ankommt, schalte ich `autoUpdate` für d
 
 ---
 
+## 🧪 Ausprobieren ohne Installation
+
+Wer die Skills erst testen möchte, klont das Repo und startet Claude Code mit dem Ordner als Plugin. Die Skills stehen dann nur in dieser Session bereit, installiert wird nichts:
+
+```bash
+git clone https://github.com/3m5suchandt/claude-skill-lib.git
+claude --plugin-dir ./claude-skill-lib
+```
+
+---
+
 ## 🛠️ Skills
 
 Jeder Ordner unter `skills/` landet automatisch im Plugin `jasu`.
@@ -63,20 +74,3 @@ Vollwertige Plugins mit Hooks, MCP-Servern oder Agents liegen unter `plugins/<na
 | Plugin | Zweck |
 |---|---|
 | _noch keins_ | |
-
----
-
-## 🧪 Lokal testen, bevor ich veröffentliche
-
-```bash
-# Arbeitskopie statt installierter Version laden – gilt nur für diese Session
-claude --plugin-dir ~/Projects/privat/claude-skill-lib
-
-# Ein einzelnes Plugin testen
-claude --plugin-dir ~/Projects/privat/claude-skill-lib/plugins/<name>
-
-# Marketplace und alle Plugins prüfen
-scripts/validate.sh
-```
-
-Die Arbeitskopie überdeckt in dieser Session das installierte `jasu`, auch mit noch nicht committeten Skills. Änderungen lade ich mit `/reload-plugins` neu. Erst nach dem Push auf `main` kommen sie in der installierten Version an.
