@@ -1,87 +1,24 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Jan's personal Claude Code skill library, published as a marketplace with exactly one plugin: `jasu`.
 
-## What this repo is
+## Structure
 
-A Claude Code **Plugin Marketplace** – a curated collection of AI agent skills organized by category. Each category is a standalone plugin installable via the Claude Code plugin system.
+- `.claude-plugin/marketplace.json` lists one plugin with `source: "./"`; `.claude-plugin/plugin.json` is that plugin.
+- Every skill lives flat in `skills/<name>/` (`SKILL.md` + German `README.md`). No categories, no sub-plugins.
 
-## Plugin structure
+## Adding or changing a skill
 
-```
-claude-skill-lib/
-├── .claude-plugin/
-│   └── marketplace.json        ← marks this repo as a marketplace
-├── <category>/                 ← one plugin per category
-│   ├── .claude-plugin/
-│   │   └── plugin.json         ← plugin manifest (name, description, version)
-│   ├── README.md               ← German description of the category
-│   └── skills/
-│       └── <skill-name>/
-│           ├── SKILL.md        ← skill prompt (YAML frontmatter + instructions)
-│           └── README.md       ← German explanation of the skill
-└── skills-lock.json            ← tracks origin of externally sourced skills
-```
+1. `skills/<name>/SKILL.md` (frontmatter `name` = folder name) and a German `README.md`
+2. Add or update the row in the skill table in `README.md` and the badge count
+3. Bump `version` in `.claude-plugin/plugin.json` – installed copies only update when the version changes
+4. Run `claude plugin validate .`
 
-## Current categories (plugins)
+## Rules
 
-| Category | Plugin name | Skills |
-|----------|-------------|--------|
-| `projektmanagement/` | `pm-privat` | lift-me |
-| `entwicklung/` | `entwicklung` | tdd |
-| `design/` | `design` | _(empty, prepared)_ |
-
-The plugin in `projektmanagement/` is named `pm-privat` on purpose: `projektmanagement@3m5-skill-hub` is installed alongside it, and two plugins with the same name would share the `/projektmanagement:` namespace. Keep the names different.
-
-## Loading plugins
-
-```bash
-# Per session (command line)
-claude --plugin-dir ./projektmanagement --plugin-dir ./entwicklung
-
-# Persistent global config (~/.claude/settings.json)
-{ "pluginDirs": ["~/claude-skill-lib/projektmanagement", "~/claude-skill-lib/entwicklung"] }
-```
-
-Skill invocation uses the plugin namespace: `/pm-privat:lift-me`, `/entwicklung:tdd`
-
-## Adding a new skill
-
-1. Choose the right category (or create a new one, see below)
-2. Create `<category>/skills/<skill-name>/SKILL.md` with frontmatter:
-   ```yaml
-   ---
-   name: skill-name
-   description: What it does and when to use it. Claude uses this to auto-invoke.
-   ---
-   ```
-3. Add a German `<category>/skills/<skill-name>/README.md`
-4. Bump the version in `<category>/.claude-plugin/plugin.json`
-
-## Adding a new category
-
-1. `mkdir -p <category>/.claude-plugin <category>/skills`
-2. Create `<category>/.claude-plugin/plugin.json` (name, description, version, author)
-3. Create `<category>/README.md` (German overview)
-4. Add the category entry to `.claude-plugin/marketplace.json`
-5. Document in root `README.md`
-
-## Conventions
-
-- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) or in the Anthropic skills synced from claude.ai (e.g. write-a-prd, prd-to-issues) – those versions win
-- Skill and category names: lowercase, hyphens only
-- READMEs are written in German
-- `skills-lock.json` tracks externally sourced skills (from `mattpocock/skills` etc.)
-- Commits are kept semantically independent: one commit per concern
-- All `.md` files are written in German, in a personal tone ("mein Setup", "ich nutze"), and visually structured with emojis, tables, badges, and code blocks
-
-## Documentation consistency
-
-Whenever skills, plugins, MCPs, or best practices change, update all affected root-level `.md` files to keep the documentation in sync:
-
-| File | Update when... |
-|------|----------------|
-| `README.md` | A plugin, skill, MCP, or category is added/removed/renamed |
-| `plugins.md` | A skill or plugin is added, removed, or its purpose changes |
-| `mcps.md` | An MCP server is added, removed, or its purpose changes |
-| `best-practices.md` | A new Claude Code tip or workflow is adopted |
+- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) or in the Anthropic skills synced from claude.ai (e.g. write-a-prd, prd-to-issues) – those versions win. Keep the "Was hier bewusst fehlt" table in `README.md` in sync.
+- The plugin name `jasu` is the slash-command prefix (`/jasu:<skill>`). Don't rename it, and never use a plugin name from the 3m5. Plugin Hub (e.g. `projektmanagement`, `shared`) – the namespaces would collide.
+- `skills-lock.json` tracks skills copied from external sources (e.g. `mattpocock/skills`).
+- Skill and folder names: lowercase, hyphens only.
+- All `.md` files except this one: German, personal tone ("ich nutze"), structured with emojis, tables and code blocks.
+- One commit per concern.

@@ -1,90 +1,42 @@
 # claude-skill-lib
 
-> Mein Claude-Setup als Marketplace – Skills, Plugins und MCPs, die ich täglich einsetze und die du direkt übernehmen kannst.
+> Meine persönliche Skill-Sammlung für Claude Code – ein Plugin, eine flache Liste.
 
-![Skills](https://img.shields.io/badge/Skills-3-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
-
----
-
-Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https://claude.ai/code). Es kombiniert drei Arten von Erweiterungen:
-
-| Typ | Was es ist | Beispiel |
-|-----|------------|---------|
-| 🛠️ **Skill** | Ein Slash-Befehl, den Claude ausführt | `/lift-me` |
-| 📦 **Plugin** | Installationseinheit, die Skills bündelt | `pm-privat` |
-| 🔌 **MCP-Server** | Externer Dienst, den Claude als Werkzeug nutzt | `gitlab-mcp` |
+![Skills](https://img.shields.io/badge/Skills-3-blue) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
 
 ---
 
-## 🚀 Schnellstart
+## 🚀 Installation
 
 ```bash
-# 1. Marketplace einmalig hinzufügen
+# Ab Claude Code 2.1.275 in einem Schritt
+/plugin install jasu --marketplace 3m5suchandt/claude-skill-lib
+
+# Ältere Versionen
 /plugin marketplace add 3m5suchandt/claude-skill-lib
-
-# 2. Gewünschte Plugins installieren
-/plugin install pm-privat@claude-skill-lib
-/plugin install entwicklung@claude-skill-lib
+/plugin install jasu@claude-skill-lib
 ```
 
----
-
-## 📦 Plugins & Skills
-
-### 🗂️ Projektmanagement
-
-Meine eigenen PM-Skills. `grill-me` und `storytelling` nutze ich aus dem 3m5. Plugin Hub (`/shared:grill-me`, `/projektmanagement:storytelling`), `write-a-prd` und `prd-to-issues` aus den Anthropic-Skills.
-
-| Skill | Befehl | Zweck |
-|-------|--------|-------|
-| lift-me | `/pm-privat:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me |
-
-**Workflow:**
-
-```
-🎯 Lösung  →  /lift-me  →  ✅ Zielleiter & Nordstern
-```
+Alle Skills laufen unter dem Präfix `jasu`, z. B. `/jasu:lift-me`.
 
 ---
 
-### 💻 Entwicklung
+## 🛠️ Skills
 
-| Skill | Befehl | Zweck |
-|-------|--------|-------|
-| tdd | `/entwicklung:tdd` | Red-Green-Refactor, verhaltensbasierte Tests |
-
-Quelle: [mattpocock/skills](https://github.com/mattpocock/skills)
-
----
-
-## 🔌 MCP-Server
-
-| Server | Zweck |
-|--------|-------|
-| [gitlab-mcp](https://github.com/zereight/gitlab-mcp) | GitLab-Issues, Merge Requests, Repositories und Pipelines direkt aus dem Chat steuern |
-
-Alle MCP-Server im Detail: [mcps.md](./mcps.md)
+| Skill | Aufruf | Zweck | Quelle |
+|---|---|---|---|
+| [lift-me](./skills/lift-me/) | `/jasu:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me | eigen |
+| [tdd](./skills/tdd/) | `/jasu:tdd` | Red-Green-Refactor mit verhaltensbasierten Tests | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| [effective-presentation-slides](./skills/effective-presentation-slides/) | `/jasu:effective-presentation-slides` | Evidenzbasierte Prinzipien für Inhalt und Struktur von Foliensätzen | eigen |
 
 ---
 
-## 💡 Tipps & Best Practices
+## 🧭 Was hier bewusst fehlt
 
-Einstellungen und Workflows, die ich täglich nutze:
+Skills, die ich schon aus anderen Quellen nutze, liegen nicht doppelt in diesem Repo:
 
-| Tipp | Kurzbeschreibung |
-|------|-----------------|
-| 🗺️ **Plan Mode** | Claude plant zuerst, ohne Code zu ändern – per `/plan`-Präfix oder `Shift+Tab` |
-| ⚡ **Plan + Auto Mode** | Nach Plan-Freigabe übernimmt Auto Mode automatisch – kein Klicken mehr |
-| 🤖 **Auto Mode** | Classifier prüft jede Aktion im Hintergrund, keine manuellen Permission-Prompts |
-| **@ Kontext** | `@datei.ts`, `@ordner/` oder `@url` – Dateien gezielt in den Kontext laden |
-| 🎨 **Output Style** | `Explanatory` erklärt Entscheidungen, `Learning` setzt `TODO(human)`-Marker |
-
-Alle Details: [best-practices.md](./best-practices.md)
-
----
-
-## 📋 Referenz
-
-- [Alle Plugins & Skills](./plugins.md)
-- [Alle MCP-Server](./mcps.md)
-- [Best Practices](./best-practices.md)
+| Skill | Woher ich ihn nutze |
+|---|---|
+| grill-me | 3m5. Plugin Hub – `/shared:grill-me` |
+| storytelling | 3m5. Plugin Hub – `/projektmanagement:storytelling` |
+| write-a-prd, prd-to-issues | Anthropic-Skills |
