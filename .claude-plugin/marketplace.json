@@ -2,7 +2,6 @@
   "name": "claude-skill-lib",
   "description": "Kuratierte Claude Code Skills nach Kategorien – Projektmanagement, Entwicklung, Design",
   "owner": { "name": "Jan" },
-  "repository": "https://github.com/jan-suchandt/claude-skill-lib",
   "plugins": [
     {
       "name": "projektmanagement",

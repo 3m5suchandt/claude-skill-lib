@@ -20,7 +20,7 @@ Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https
 
 ```bash
 # 1. Marketplace einmalig hinzufügen
-/plugin marketplace add jan-suchandt/claude-skill-lib
+/plugin marketplace add 3m5suchandt/claude-skill-lib
 
 # 2. Gewünschte Plugins installieren
 /plugin install projektmanagement@claude-skill-lib
