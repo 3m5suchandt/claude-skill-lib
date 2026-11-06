@@ -2,7 +2,7 @@
 
 > Mein Claude-Setup als Marketplace – Skills, Plugins und MCPs, die ich täglich einsetze und die du direkt übernehmen kannst.
 
-![Skills](https://img.shields.io/badge/Skills-5-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
+![Skills](https://img.shields.io/badge/Skills-3-blue) ![MCPs](https://img.shields.io/badge/MCPs-1-orange) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
 
 ---
 
@@ -33,22 +33,17 @@ Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https
 
 ### 🗂️ Projektmanagement
 
-Drei Skills, die vage Ideen in ausführbare Issues überführen – und Lösungen auf ihr eigentliches Ziel zurückführen. `grill-me` und `storytelling` nutze ich aus dem 3m5. Plugin Hub (`/shared:grill-me`, `/projektmanagement:storytelling`).
+Meine eigenen PM-Skills. `grill-me` und `storytelling` nutze ich aus dem 3m5. Plugin Hub (`/shared:grill-me`, `/projektmanagement:storytelling`), `write-a-prd` und `prd-to-issues` aus den Anthropic-Skills.
 
 | Skill | Befehl | Zweck |
 |-------|--------|-------|
-| write-a-prd | `/pm-privat:write-a-prd` | Idee → strukturiertes PRD als Jira- oder GitHub-Issue |
-| prd-to-issues | `/pm-privat:prd-to-issues` | PRD → unabhängige Issues nach Vertical-Slice-Prinzip |
 | lift-me | `/pm-privat:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me |
 
 **Workflow:**
 
 ```
-💡 Idee  →  /write-a-prd  →  /prd-to-issues  →  ✅ Issues
 🎯 Lösung  →  /lift-me  →  ✅ Zielleiter & Nordstern
 ```
-
-Quelle: [aihero.dev](https://www.aihero.dev/5-agent-skills-i-use-every-day)
 
 ---
 

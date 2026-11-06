@@ -1,7 +1,7 @@
 {
   "name": "pm-privat",
-  "description": "PRD-Workflow (write-a-prd → prd-to-issues) und lift-me. Überführt vage Ideen in ausführbare Issues und Lösungen zurück auf ihr Ziel.",
-  "version": "2.0.0",
+  "description": "Eigene PM-Skills: lift-me führt Lösungen per „Wozu?“ auf ihr eigentliches Ziel zurück.",
+  "version": "3.0.0",
   "author": { "name": "Jan" },
   "repository": "https://github.com/3m5suchandt/claude-skill-lib",
   "license": "MIT"

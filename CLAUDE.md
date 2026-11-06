@@ -27,7 +27,7 @@ claude-skill-lib/
 
 | Category | Plugin name | Skills |
 |----------|-------------|--------|
-| `projektmanagement/` | `pm-privat` | write-a-prd, prd-to-issues, lift-me |
+| `projektmanagement/` | `pm-privat` | lift-me |
 | `entwicklung/` | `entwicklung` | tdd |
 | `design/` | `design` | _(empty, prepared)_ |
 
@@ -68,7 +68,7 @@ Skill invocation uses the plugin namespace: `/pm-privat:lift-me`, `/entwicklung:
 
 ## Conventions
 
-- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) – the hub version wins
+- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) or in the Anthropic skills synced from claude.ai (e.g. write-a-prd, prd-to-issues) – those versions win
 - Skill and category names: lowercase, hyphens only
 - READMEs are written in German
 - `skills-lock.json` tracks externally sourced skills (from `mattpocock/skills` etc.)
