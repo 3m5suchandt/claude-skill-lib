@@ -36,11 +36,23 @@ Damit jeder Push auf `main` automatisch ankommt, schalte ich `autoUpdate` für d
 
 Jeder Ordner unter `skills/` landet automatisch im Plugin `jasu`.
 
-| Skill | Aufruf | Zweck | Quelle |
-|---|---|---|---|
-| [lift-me](./skills/lift-me/) | `/jasu:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me | eigen |
-| [tdd](./skills/tdd/) | `/jasu:tdd` | Red-Green-Refactor mit verhaltensbasierten Tests | [mattpocock/skills](https://github.com/mattpocock/skills) |
-| [effective-presentation-slides](./skills/effective-presentation-slides/) | `/jasu:effective-presentation-slides` | Evidenzbasierte Prinzipien für Inhalt und Struktur von Foliensätzen | eigen |
+### 🪜 [lift-me](./skills/lift-me/)
+
+`/jasu:lift-me` · eigener Skill
+
+Wenn ich mich in technischen Details verliere, klettert `lift-me` mit „Wozu?“-Fragen von meiner Lösung hoch zum Ziel hinter dem Ziel. Am Ende habe ich eine Zielleiter, eine bewusst gewählte Arbeitshöhe mit ehrgeiziger Messgröße und Alternativen, die meine ursprüngliche Lösung schlagen könnten. Damit ist er das Gegenstück zu grill-me, das vom Plan aus nach unten in die Details bohrt.
+
+### 🧪 [tdd](./skills/tdd/)
+
+`/jasu:tdd` · übernommen aus [mattpocock/skills](https://github.com/mattpocock/skills)
+
+Claude entwickelt in kleinen Red-Green-Refactor-Zyklen: erst ein fehlschlagender Test, dann genau so viel Code, dass er besteht, dann der nächste Test. Weil die Tests nur Verhalten über öffentliche Schnittstellen prüfen, überleben sie Refactorings und lesen sich wie eine Spezifikation. So entsteht kein spekulativer Code, und Fehler fallen sofort auf.
+
+### 🎯 [effective-presentation-slides](./skills/effective-presentation-slides/)
+
+`/jasu:effective-presentation-slides` · eigener Skill
+
+Der Skill wendet Befunde aus der Gedächtnisforschung auf Foliensätze an, etwa Dual Coding, Mayers Multimedia-Prinzip und die zehn Regeln von Naegle. Er gliedert neue Decks, macht aus beschreibenden Titeln Aussagesätze und findet in bestehenden Decks überladene Folien. Mein Publikum nimmt so pro Folie genau eine Botschaft mit, statt gleichzeitig lesen und zuhören zu müssen.
 
 ---
 
@@ -68,15 +80,3 @@ scripts/validate.sh
 ```
 
 Die Arbeitskopie überdeckt in dieser Session das installierte `jasu`, auch mit noch nicht committeten Skills. Änderungen lade ich mit `/reload-plugins` neu. Erst nach dem Push auf `main` kommen sie in der installierten Version an.
-
----
-
-## 🧭 Was hier bewusst fehlt
-
-Skills, die ich schon aus anderen Quellen nutze, liegen nicht doppelt in diesem Repo:
-
-| Skill | Woher ich ihn nutze |
-|---|---|
-| grill-me | 3m5. Plugin Hub – `/shared:grill-me` |
-| storytelling | 3m5. Plugin Hub – `/projektmanagement:storytelling` |
-| write-a-prd, prd-to-issues | Anthropic-Skills |

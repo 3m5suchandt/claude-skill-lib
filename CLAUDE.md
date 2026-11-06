@@ -15,13 +15,13 @@ No `version` anywhere (neither `plugin.json` nor marketplace entries). Updates a
 ## Adding or changing a skill or plugin
 
 1. Create `skills/<name>/` (frontmatter `name` = folder name), or `plugins/<name>/` plus its entry in `marketplace.json`
-2. Update the tables and badge counts in `README.md`
+2. In `README.md`: add a `###` section for a skill (call, source, 2–3 sentences on its value) or a row in the plugin table, and update the badge counts
 3. Run `scripts/validate.sh`
 4. Test before pushing: `claude --plugin-dir .` (or `./plugins/<name>`) – the session-only copy overrides the installed `jasu`
 
 ## Rules
 
-- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) or in the Anthropic skills synced from claude.ai (e.g. write-a-prd, prd-to-issues) – those versions win. Keep the "Was hier bewusst fehlt" table in `README.md` in sync.
+- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) or in the Anthropic skills synced from claude.ai (e.g. write-a-prd, prd-to-issues) – those versions win.
 - The plugin name `jasu` is the slash-command prefix. Don't rename it, and never use a plugin name from the 3m5. Plugin Hub (e.g. `projektmanagement`, `shared`) – the namespaces would collide.
 - `skills-lock.json` tracks skills copied from external sources (e.g. `mattpocock/skills`).
 - Skill, plugin and folder names: lowercase, hyphens only.
