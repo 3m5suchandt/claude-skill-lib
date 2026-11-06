@@ -27,7 +27,7 @@ claude-skill-lib/
 
 | Category | Plugin name | Skills |
 |----------|-------------|--------|
-| `projektmanagement/` | `pm-privat` | grill-me, write-a-prd, prd-to-issues, lift-me |
+| `projektmanagement/` | `pm-privat` | write-a-prd, prd-to-issues, lift-me |
 | `entwicklung/` | `entwicklung` | tdd |
 | `design/` | `design` | _(empty, prepared)_ |
 
@@ -43,7 +43,7 @@ claude --plugin-dir ./projektmanagement --plugin-dir ./entwicklung
 { "pluginDirs": ["~/claude-skill-lib/projektmanagement", "~/claude-skill-lib/entwicklung"] }
 ```
 
-Skill invocation uses the plugin namespace: `/pm-privat:grill-me`, `/entwicklung:tdd`
+Skill invocation uses the plugin namespace: `/pm-privat:lift-me`, `/entwicklung:tdd`
 
 ## Adding a new skill
 
@@ -68,6 +68,7 @@ Skill invocation uses the plugin namespace: `/pm-privat:grill-me`, `/entwicklung
 
 ## Conventions
 
+- No duplicates of skills that already ship in the 3m5. Plugin Hub (`3m5/plugin-hub`, e.g. grill-me, storytelling) – the hub version wins
 - Skill and category names: lowercase, hyphens only
 - READMEs are written in German
 - `skills-lock.json` tracks externally sourced skills (from `mattpocock/skills` etc.)

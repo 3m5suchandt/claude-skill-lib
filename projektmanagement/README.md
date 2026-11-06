@@ -14,9 +14,6 @@ claude --plugin-dir /pfad/zu/claude-skill-lib/projektmanagement
 
 ## Enthaltene Skills
 
-### `/pm-privat:grill-me`
-Befragt dich hartnäckig zu einem Plan oder Design, bis ein gemeinsames Verständnis entsteht. Jede Entscheidungsverzweigung wird aufgelöst. Ideal zum Stress-Testing von Ideen vor der Umsetzung.
-
 ### `/pm-privat:write-a-prd`
 Verwandelt das erarbeitete Verständnis in ein strukturiertes Product Requirements Document (PRD) mit User Stories, Implementierungsentscheidungen und Akzeptanzkriterien. Reicht das PRD als GitHub Issue ein.
 
@@ -29,7 +26,9 @@ Gegenstück zu `grill-me`: Klettert per „Wozu?“-Fragen von einer Lösung ode
 ## Workflow
 
 ```
-/pm-privat:grill-me → /pm-privat:write-a-prd → /pm-privat:prd-to-issues
+/pm-privat:write-a-prd → /pm-privat:prd-to-issues
 ```
+
+`grill-me` und `storytelling` nutze ich aus dem 3m5. Plugin Hub (`/shared:grill-me`, `/projektmanagement:storytelling`).
 
 Quelle der Skills: https://www.aihero.dev/5-agent-skills-i-use-every-day
