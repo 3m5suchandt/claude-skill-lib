@@ -15,7 +15,7 @@ No `version` anywhere (neither `plugin.json` nor marketplace entries). Updates a
 ## Adding or changing a skill or plugin
 
 1. Create `skills/<name>/` (frontmatter `name` = folder name), or `plugins/<name>/` plus its entry in `marketplace.json`
-2. In `README.md`: add a `###` section for a skill (call, source, 2–3 sentences on its value) or a row in the plugin table, and update the badge counts
+2. In `README.md`: add a `###` section for a skill (call, source only if external, 2–3 sentences on its value) and update the Skills badge; the first plugin gets a new `🔌 Plugins` section with its install command
 3. Run `scripts/validate.sh`
 4. Test before pushing: `claude --plugin-dir .` (or `./plugins/<name>`) – the session-only copy overrides the installed `jasu`
 
@@ -26,4 +26,5 @@ No `version` anywhere (neither `plugin.json` nor marketplace entries). Updates a
 - `skills-lock.json` tracks skills copied from external sources (e.g. `mattpocock/skills`).
 - Skill, plugin and folder names: lowercase, hyphens only.
 - All `.md` files except this one: German, personal tone ("ich nutze"), structured with emojis, tables and code blocks.
+- `README.md` is for people using the skills: installation, trying them out, what each skill is good for. No repo structure, maintenance, versioning or pre-release testing – that belongs in this file.
 - One commit per concern.
