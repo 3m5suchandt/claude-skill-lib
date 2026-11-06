@@ -1,27 +1,12 @@
 {
   "name": "claude-skill-lib",
-  "description": "Kuratierte Claude Code Skills nach Kategorien – Projektmanagement, Entwicklung, Design",
+  "description": "Meine persönlichen Claude-Skills als Marketplace – ein Plugin, eine flache Liste.",
   "owner": { "name": "Jan" },
   "plugins": [
     {
-      "name": "pm-privat",
-      "source": "./projektmanagement",
-      "description": "Eigene PM-Skills: lift-me (Lösung → Ziel hinter dem Ziel)"
-    },
-    {
-      "name": "entwicklung",
-      "source": "./entwicklung",
-      "description": "Test-Driven Development mit Red-Green-Refactor"
-    },
-    {
-      "name": "design",
-      "source": "./design",
-      "description": "Design- und UI/UX-Skills"
-    },
-    {
-      "name": "kommunikation",
-      "source": "./kommunikation",
-      "description": "Präsentations- und Kommunikations-Skills: evidenzbasierte Foliengestaltung, Storytelling und Wissenstransfer"
+      "name": "jasu",
+      "source": "./",
+      "description": "Alle meine persönlichen Skills in einem Plugin, Aufruf über /jasu:<skill>."
     }
   ]
 }

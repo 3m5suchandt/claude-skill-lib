@@ -193,7 +193,7 @@ Immer ein PDF-Backup bereit haben. Für Videos: Screenshot-Backups von Schlüsse
 ## Aufruf
 
 ```
-/kommunikation:effective-presentation-slides
+/jasu:effective-presentation-slides
 ```
 
 Der Skill greift **automatisch**, sobald du Claude bittest, eine Präsentation zu erstellen, zu reviewen oder Folien zu strukturieren – auch ohne expliziten Skill-Aufruf.

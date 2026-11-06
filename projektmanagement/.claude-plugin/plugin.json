@@ -1,8 +1,0 @@
-{
-  "name": "pm-privat",
-  "description": "Eigene PM-Skills: lift-me führt Lösungen per „Wozu?“ auf ihr eigentliches Ziel zurück.",
-  "version": "3.0.0",
-  "author": { "name": "Jan" },
-  "repository": "https://github.com/3m5suchandt/claude-skill-lib",
-  "license": "MIT"
-}
