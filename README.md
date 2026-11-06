@@ -23,7 +23,7 @@ Dieses Repo ist meine persönliche Erweiterungssammlung für [Claude Code](https
 /plugin marketplace add 3m5suchandt/claude-skill-lib
 
 # 2. Gewünschte Plugins installieren
-/plugin install projektmanagement@claude-skill-lib
+/plugin install pm-privat@claude-skill-lib
 /plugin install entwicklung@claude-skill-lib
 ```
 
@@ -37,11 +37,11 @@ Fünf Skills, die vage Ideen in ausführbare Issues überführen, rohe Kundenwü
 
 | Skill | Befehl | Zweck |
 |-------|--------|-------|
-| grill-me | `/projektmanagement:grill-me` | Hartnäckige Rückfragen bis zum gemeinsamen Verständnis |
-| write-a-prd | `/projektmanagement:write-a-prd` | Idee → strukturiertes PRD als Jira- oder GitHub-Issue |
-| prd-to-issues | `/projektmanagement:prd-to-issues` | PRD → unabhängige Issues nach Vertical-Slice-Prinzip |
-| storytelling | `/projektmanagement:storytelling` | Kundenwunsch → sprint-fertige User Stories (Connextra, Gherkin, INVEST, SPIDR) |
-| lift-me | `/projektmanagement:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me |
+| grill-me | `/pm-privat:grill-me` | Hartnäckige Rückfragen bis zum gemeinsamen Verständnis |
+| write-a-prd | `/pm-privat:write-a-prd` | Idee → strukturiertes PRD als Jira- oder GitHub-Issue |
+| prd-to-issues | `/pm-privat:prd-to-issues` | PRD → unabhängige Issues nach Vertical-Slice-Prinzip |
+| storytelling | `/pm-privat:storytelling` | Kundenwunsch → sprint-fertige User Stories (Connextra, Gherkin, INVEST, SPIDR) |
+| lift-me | `/pm-privat:lift-me` | Lösung → Ziel hinter dem Ziel per „Wozu?“ – Gegenstück zu grill-me |
 
 **Workflow:**
 

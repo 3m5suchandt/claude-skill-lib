@@ -63,8 +63,8 @@ Als technischer Projektleiter denke ich schnell in Lösungen – und verliere mi
 ## Aufruf
 
 ```
-/projektmanagement:lift-me
-/projektmanagement:lift-me Ich baue einen MCP-Server für unser Intranet
+/pm-privat:lift-me
+/pm-privat:lift-me Ich baue einen MCP-Server für unser Intranet
 ```
 
 Oder einfach mitten in der Arbeit: *„Wozu mache ich das eigentlich?“*
