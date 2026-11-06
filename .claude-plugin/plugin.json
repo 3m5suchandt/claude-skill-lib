@@ -1,7 +1,6 @@
 {
   "name": "jasu",
   "description": "Meine persönlichen Claude-Skills in einem Plugin – Aufruf über /jasu:<skill>.",
-  "version": "1.0.0",
   "author": { "name": "Jan" },
   "repository": "https://github.com/3m5suchandt/claude-skill-lib",
   "license": "MIT"
