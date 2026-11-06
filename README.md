@@ -1,12 +1,24 @@
 # claude-skill-lib
 
-> Meine persönliche Skill-Sammlung für Claude Code.
+> Meine persönliche Skill-Sammlung für Claude Cowork und Claude Code.
 
 ![Skills](https://img.shields.io/badge/Skills-3-blue) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-green)
 
 ---
 
 ## 🚀 Installation
+
+Alle Skills stecken im Plugin `jasu`. Einmal installiert, greift Claude von selbst darauf zurück, sobald eine Anfrage zu einem Skill passt.
+
+### Claude Cowork
+
+1. **Customize** öffnen und **Plugins** wählen
+2. **Add marketplace** wählen und das Repository eintragen: `3m5suchandt/claude-skill-lib`
+3. Unter **Discover** das Plugin **jasu** auswählen und **Install** klicken
+
+Damit neue Versionen automatisch ankommen, beim Marketplace **Sync automatically** aktivieren. Alternativ von Hand über **Check for updates**.
+
+### Claude Code
 
 ```bash
 # Ab Claude Code 2.1.275 in einem Schritt
@@ -17,7 +29,7 @@
 /plugin install jasu@claude-skill-lib
 ```
 
-Alle Skills laufen unter dem Präfix `jasu`, z. B. `/jasu:lift-me`.
+Gezielt aufrufen lassen sich die Skills mit dem Präfix `jasu`, z. B. `/jasu:lift-me`.
 
 Damit neue Versionen automatisch ankommen, `autoUpdate` für den Marketplace in `~/.claude/settings.json` einschalten:
 
@@ -28,17 +40,6 @@ Damit neue Versionen automatisch ankommen, `autoUpdate` für den Marketplace in 
     "autoUpdate": true
   }
 }
-```
-
----
-
-## 🧪 Ausprobieren ohne Installation
-
-Wer die Skills erst testen möchte, klont das Repo und startet Claude Code mit dem Ordner als Plugin. Die Skills stehen dann nur in dieser Session bereit, installiert wird nichts:
-
-```bash
-git clone https://github.com/3m5suchandt/claude-skill-lib.git
-claude --plugin-dir ./claude-skill-lib
 ```
 
 ---

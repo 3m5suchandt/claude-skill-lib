@@ -26,5 +26,5 @@ No `version` anywhere (neither `plugin.json` nor marketplace entries). Updates a
 - `skills-lock.json` tracks skills copied from external sources (e.g. `mattpocock/skills`).
 - Skill, plugin and folder names: lowercase, hyphens only.
 - All `.md` files except this one: German, personal tone ("ich nutze"), structured with emojis, tables and code blocks.
-- `README.md` is for people using the skills: installation, trying them out, what each skill is good for. No repo structure, maintenance, versioning or pre-release testing – that belongs in this file.
+- `README.md` is for people using the skills, not developers: installation in Claude Cowork and Claude Code, and what each skill is good for. No repo structure, maintenance, versioning, `--plugin-dir` or other testing – that belongs in this file.
 - One commit per concern.
