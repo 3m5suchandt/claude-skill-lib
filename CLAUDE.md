@@ -27,7 +27,7 @@ claude-skill-lib/
 
 | Category | Plugin name | Skills |
 |----------|-------------|--------|
-| `projektmanagement/` | `projektmanagement` | grill-me, write-a-prd, prd-to-issues |
+| `projektmanagement/` | `projektmanagement` | grill-me, write-a-prd, prd-to-issues, lift-me |
 | `entwicklung/` | `entwicklung` | tdd |
 | `design/` | `design` | _(empty, prepared)_ |
 
